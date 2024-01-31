@@ -1,4 +1,5 @@
-mod matematica;
+mod operacoes;
+use operacoes::matematica;
 
 fn main() {
     println!("2 + 2 : {}", matematica::somar(2, 2));
