@@ -1,0 +1,14 @@
+[package]
+name = "hcode_functions"
+version = "0.1.0"
+edition = "2021"
+authors = ["Hcode <contato@hcode.com.br>", "Lessonelson"]
+description = "Funções para o curso de Rust da Hcode"
+homepage = "https://hcode.com.br"
+documentation = "https://hcode.com.br/docs"
+license = "MIT"
+keywords = ["rust", "hcode", "curso"]
+categories = ["functions", "development"]
+
+[dependencies]
+#hcode_functions = "0.1.0"
