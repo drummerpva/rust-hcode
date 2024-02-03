@@ -1,6 +1,6 @@
 use std::{
     env,
-    fs::{metadata, File},
+    fs::{metadata, read_dir, File},
     io::{Read, Write},
 };
 
@@ -42,4 +42,20 @@ pub fn existe(caminho_completo: &str) -> Result<bool, &'static str> {
         return Ok(true);
     }
     return Err("Arquivo não existe!");
+}
+
+pub fn ler_diretorio(caminho: &str) -> Result<(), std::io::Error> {
+    let items = read_dir(caminho)?;
+    for item in items {
+        let item = item?;
+        let item_caminho = item.path();
+        if item_caminho.is_dir() {
+            println!("Pasta: {}", item_caminho.display());
+        }
+        if item_caminho.is_file() {
+            println!("Arquivo: {}", item_caminho.display());
+        }
+    }
+
+    return Ok(());
 }
